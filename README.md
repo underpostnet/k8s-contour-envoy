@@ -24,10 +24,14 @@
 
 - Install manifest `kubectl apply -f contour.yaml`
 
-- Get projectcontour namespace info `kubectl -n projectcontour get deployment,daemonset,service`
+- Get projectcontour namespace info `kubectl -n projectcontour get deployment,daemonset,service` | `kubectl -n projectcontour get all,ingress`
+
+- Set external ip service `kubectl patch svc contour -n projectcontour -p '{\"spec\": {\"type\": \"LoadBalancer\", \"externalIPs\":[\"192.168.1.83\"]}}'`
 
 #### Doc
 
 - https://tanzu.vmware.com/developer/guides/service-routing-contour-to-ingress-and-beyond/
+
+- https://blog.markvincze.com/how-to-use-envoy-as-a-load-balancer-in-kubernetes/
 
 - https://projectcontour.io/contour_v190/
