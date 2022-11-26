@@ -1,8 +1,8 @@
-#### Doc
+#### CLI project install
 
-- https://tanzu.vmware.com/developer/guides/service-routing-contour-to-ingress-and-beyond/
+`go mod init main`
 
-- https://projectcontour.io/contour_v190/
+`go get github.com/dixonwille/wmenu/v5`
 
 #### Usage
 
@@ -25,3 +25,9 @@
 - Install manifest `kubectl apply -f contour.yaml`
 
 - Get projectcontour namespace info `kubectl -n projectcontour get deployment,daemonset,service`
+
+#### Doc
+
+- https://tanzu.vmware.com/developer/guides/service-routing-contour-to-ingress-and-beyond/
+
+- https://projectcontour.io/contour_v190/
