@@ -40,7 +40,13 @@
 
 - Restart deployment `kubectl rollout restart deployment <deployment_name> -n <namespace>`
 
-- Delete cluster `kind delete cluster --name kind-underpost-cluster`
+- Delete kind cluster `kind delete cluster --name kind-underpost-cluster`
+
+- Delete cluster `kubectl config delete-cluster <name-cluster>`
+
+- Delete contex `kubectl config delete-context <name-cluster>`
+
+- Delete users `kubectl config unset users.<name-cluster>|<admin-cluster>`
 
 #### Doc
 
