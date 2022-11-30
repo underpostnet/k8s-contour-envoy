@@ -1,3 +1,5 @@
+[contour](https://www.nexodev.org/uploads/cloud/francisco-verdugo/k8s/fd5ed-contour1.png)
+
 #### CLI project install
 
 `go mod init main`
@@ -35,6 +37,8 @@
 - Set external ip service `kubectl patch svc <name-service> -n <namespace> -p '{\"spec\": {\"type\": \"LoadBalancer\", \"externalIPs\":[\"192.168.1.83\"]}}'`
 
 - Fix pod `kubectl patch pod <name-pod> -n <namespace> -p '{\"apiVersion\": \"networking.k8s.io/v1beta1\"}'`
+
+- Get pod yaml `kubectl get pod -n <namespace> <pod-name> -o yaml > out.txt`
 
 - Delete pod `kubectl delete pod <pod_name> -n <namespace>`
 
