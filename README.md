@@ -10,6 +10,8 @@
 
 - Create cluster `kind create cluster --name <name-cluster>`
 
+- Get deploy cluster info `kubectl cluster-info --context kind-<name-cluster>`
+
 - Verify clusters, context, and users `kubectl config view` and save data `kubectl config view --minify --flatten --context=<name-context> > out.txt`
 
 - Get a list of resource types `kubectl api-resources`
